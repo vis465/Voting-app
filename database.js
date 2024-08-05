@@ -12,11 +12,7 @@ dotenv.config();
 
 
 const pool = mysql.createPool({
-  host: process.env.MYSQL_HOST,
-  user: process.env.MYSQL_USER,
-  password: process.env.MYSQL_PASSWORD,
-  database: process.env.MYSQL_DATABASE,
-  rowsAsArray: true
+ mysql.createConnection({host:"sonavotingapp-server.mysql.database.azure.com", user:"vgnqykuftr", password:"K4$viQkXVEHIQiZi", database:"online_voting_application", port:3306, ssl:{ca:fs.readFileSync("{ca-cert filename}")}});
 }).promise()
 
 const transporter = nodemailer.createTransport({
