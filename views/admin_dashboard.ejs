@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: montserrat;
+            background-color: white;
+            background-repeat: no-repeat;
+            background-size: cover;   
+            height: 100vh;
+            overflow: hidden;
+        }
+        .sonaportal{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+        }
+
+        .sonaportal h1{
+            font-size: 70px;
+        }
+
+        .dashboard{
+            margin-top: 5%;
+            border: 1px solid white;
+            box-shadow: 0 10px 14px rgba(0, 0, 0, 0.1);
+            width:500px;
+            height:200px;
+            border-radius: 10px;
+        }
+
+        .dashboard h1{
+            background-color: rgb(30,66,118);
+            color:  rgb(255,204,42);
+            border-radius:10px 10px 0px 0px ;
+        }
+        .sonaportal{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .sonaportal h1{
+            font-size: 45px;
+        }
+
+        img{
+            height: 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sonalogo">
+        <img src="download.png" alt="sonalogo">
+    </div>
+    <div class="sonaportal">
+        <img src="SONA.jpg" alt="sonalogo">
+    </div>
+    <center>
+    <div class="dashboard">
+        <h1>ADMIN DASHBOARD</h1>
+        <br>
+        <button id="logout" onclick="window.location.href='/admin_result'">RESULT</button><br>
+        <p></p>
+        <button id="logout" onclick="window.location.href='/add_candidates' ">ADD CANDIDATES</button>
+    </div>
+    </center>
+</body>
+</html>

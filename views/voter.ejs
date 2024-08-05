@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: montserrat;
+            background-image: url('building.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;   
+            height: 100vh;
+            overflow: hidden;
+        }
+        img{
+            height: 80px ;
+        }
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 10px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(30,66,118);
+            color: rgb(255,204,42);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: larger;
+        }
+
+        input[type="submit"]:hover {
+            background-color:green;
+            color: black;
+
+        }
+
+        .sonaportal{
+            position: absolute;
+            top: 0;
+            right: 0;
+            
+        }
+
+        .sonaportal h1{
+            font-size: 45px;
+        }
+
+        .voting{
+            padding:5% 20% 0 20%;
+        }
+        
+        .voting h2{
+            text-align: center;
+            padding: 0 0 10px 0;
+            background-color:rgb(30,66,118);
+            color:  rgb(255,204,42);
+            border-radius:10px 10px 0px 0px ;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .voting form{
+            font-size:x-large;
+            background-color: white;
+        }
+
+
+        .header{
+            display: flex;
+        
+        }
+
+        .header-text{
+            display: flex;
+            font-style: "Montserrat";
+            padding: 10px;
+            margin-left: 32%;
+            margin-top: 10px;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="sonalogo">
+            <img src="download.png" alt="sonalogo">
+        </div>
+    </div>
+    <div class="sonaportal">
+        <img src="SONA.jpg" alt="portallogo">
+    </div>
+    <center>
+    <div class="voting">
+        <h2><%=role%></h2>
+        <form action="/insert_vote" method="POST">
+            <table>
+                <th></th>
+                <th></th>
+            <% cd.forEach((item)=>{%>
+                <tr><label for="person1">
+                    <%=item.name%>
+                </label></tr>
+                <tr><input type="radio" id="person1" name="data" value="<%=item.reg_no%>"></tr>
+                
+
+                <%});%>
+            </table>
+                <br>
+                <input type="submit" value="SUBMIT" style="font-size:large";>
+        </form>
+    </div>
+    </center>
+</body>
+
+</html>
